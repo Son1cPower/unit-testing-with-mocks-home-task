@@ -1,0 +1,27 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "standard"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "rules": {
+        "mocha/no-skipped-tests": "error",
+        "mocha/no-exclusive-tests": "error"
+    },
+    "settings": {
+        "mocha/additionalCustomNames": [
+            { "name": "describeModule", "type": "suite", "interfaces": [ "BDD" ] },
+            { "name": "testModule", "type": "testCase", "interfaces": [ "TDD" ] }
+        ]
+    },
+    "plugins": [
+        "mocha",
+        "plugin:mocha/recommended"
+    ]
+}
